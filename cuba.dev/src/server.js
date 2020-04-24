@@ -6,7 +6,7 @@ require('dotenv/config')
 
 const mongoClient = require("mongodb").MongoClient
 
-mongoClient.connect(process.env.URI_BD, (erro, cliente) =>{
+mongoClient.connect(process.env.URI_BD, { useUnifiedTopology: true }, (erro, cliente) =>{
     if(erro)
         return console.log(erro)
     db = cliente.db('cubadev')
