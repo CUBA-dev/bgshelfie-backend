@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My CRUD in NodeJS</title>
+</head>
+
+<body>
+
+    <h2>Editar Registro</h2>
+    <% mecanica.forEach(function(details) { %>
+    <form action="/mecanica/edit/<%= details._id %>" method="POST">
+        <input type="text" value="<%= details.desc %>" name="desc">
+        <br />
+        <button><a href="/mecanica/show">Todos</a></button>
+        <button type="submit">Editar</button>
+    </form>
+    <% }) %>
+
+</body>
+
+</html>
