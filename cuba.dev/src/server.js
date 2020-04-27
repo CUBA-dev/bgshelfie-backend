@@ -1,67 +1,65 @@
 require('dotenv/config')
-const express = require("express");
-const app = express();
-const path = require("path");
-const bodyParser = require("body-parser");
+const express = require("express")
+const app = express()
+const path = require("path")
+const bodyParser = require("body-parser")
 
-const ObjectId = require("mongodb").ObjectID;
-const MongoClient = require("mongodb").MongoClient;
-const uri = process.env.URI_BD;
+const ObjectId = require("mongodb").ObjectID
+const MongoClient = require("mongodb").MongoClient
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }))
 
-MongoClient.connect(uri, { useUnifiedTopology: true }, (err, client) => {
-  if (err) return console.log(err);
-  db = client.db("cubadev"); // coloque o nome do seu DB
+MongoClient.connect( process.env.URI_BD, { useUnifiedTopology: true }, (err, client) => {
+  if (err) return console.log(err)
+  db = client.db("cubadev")
 
   app.listen(3000, () => {
-    console.log("Servidor rodando na porta 3000");
-  });
-});
+    console.log("Servidor rodando na porta 3000")
+  })
+})
 
-//Tipo de template engine
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views"))
 
 app
-  .route("/mecanica") //setado a rota, e abaixo as ações a serem tomadas dentro desta rota
+  .route("/mecanica") 
   .get(function (req, res) {
-    const cursor = db.collection("mecanica").find();
-    res.render("mecanica/index.ejs");
+    const cursor = db.collection("mecanica").find()
+    res.render("mecanica/index.ejs")
   })
 
   .post((req, res) => {
     db.collection("mecanica").save(req.body, (err, result) => {
-      if (err) return console.log(err);
+      if (err) return console.log(err)
 
-      console.log("Salvo no Banco de Dados");
-      res.redirect("mecanica/show");
-    });
-  });
+      console.log("Salvo no Banco de Dados")
+      res.redirect("mecanica/show")
+    })
+  })
 
 app.route("/mecanica/show").get((req, res) => {
   db.collection("mecanica")
     .find()
     .toArray((err, results) => {
-      if (err) return console.log(err);
-      res.render("mecanica/show.ejs", { mecanica: results });
-    });
-});
+      if (err) return console.log(err)
+      res.render("mecanica/show.ejs", { mecanica: results })
+    })
+})
 
 app
   .route("/mecanica/edit/:id")
   .get((req, res) => {
-    var id = req.params.id;
+    var id = req.params.id
 
     db.collection("mecanica")
       .find(ObjectId(id))
       .toArray((err, result) => {
-        if (err) return res.send(err);
-        res.render("mecanica/edit.ejs", { mecanica: result });
-      });
+        if (err) return res.send(err)
+        res.render("mecanica/edit.ejs", { mecanica: result })
+      })
   })
   .post((req, res) => {
-    var id = req.params.id;
-    var desc = req.body.desc;
+    var id = req.params.id
+    var desc = req.body.desc
 
     db.collection("mecanica").updateOne(
       { _id: ObjectId(id) },
@@ -72,19 +70,19 @@ app
       },
       (err, result) => {
           console.log(err)
-        if (err) return res.send(err);
-        res.redirect("/mecanica/show");
-        console.log("Atualizado no Banco de Dados");
+        if (err) return res.send(err)
+        res.redirect("/mecanica/show")
+        console.log("Atualizado no Banco de Dados")
       }
-    );
-  });
+    )
+  })
 
 app.route("/mecanica/delete/:id").get((req, res) => {
-  var id = req.params.id;
+  var id = req.params.id
 
   db.collection("mecanica").deleteOne({ _id: ObjectId(id) }, (err, result) => {
-    if (err) return res.send(500, err);
-    console.log("Deletado do Banco de Dados!");
-    res.redirect("/mecanica/show");
-  });
-});
+    if (err) return res.send(500, err)
+    console.log("Deletado do Banco de Dados!")
+    res.redirect("/mecanica/show")
+  })
+})
