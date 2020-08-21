@@ -29,11 +29,10 @@ app
 
   .post((req, res) => {
     db.collection("mecanica").save(req.body, (err, result) => {
-      if (err) return console.log(err)
-
-      console.log("Salvo no Banco de Dados")
-      res.redirect("mecanica/show")
-    })
+      if (err) return console.log(err);
+      console.log("Salvo no Banco de Dados");
+      res.redirect("mecanica/show");
+    });
   })
 
 app.route("/mecanica/show").get((req, res) => {
