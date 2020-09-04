@@ -19,7 +19,7 @@
         <tbody>
             <% mecanica.forEach(function(details) { %>
             <tr>
-                <td><%= details.desc %></td>
+                <td><%= details.nome %></td>
                 <td><a href="/mecanica/edit/<%= details._id %>">Editar</a> - <a href="/mecanica/delete/<%= details._id %>">Deletar</a>
                 </td>
             </tr>

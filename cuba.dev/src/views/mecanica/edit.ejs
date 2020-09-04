@@ -11,10 +11,12 @@
     <h2>Editar Registro</h2>
     <% mecanica.forEach(function(details) { %>
     <form action="/mecanica/edit/<%= details._id %>" method="POST">
-        <input type="text" value="<%= details.desc %>" name="desc">
+        <input type="text" value="<%= details.nome %>" name="nome">
         <br />
-        <button><a href="/mecanica/show">Todos</a></button>
-        <button type="submit">Editar</button>
+        <button type="submit">Salvar</button>
+        <br />
+        <br />
+        <button><a href="/mecanica/show">Voltar para a listagem</a></button>
     </form>
     <% }) %>
 
