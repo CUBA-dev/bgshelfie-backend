@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Domínio</title>
+</head>
+
+<body>
+
+    <h2>Registros</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <td>Domínio</td>
+                <td>Ação</td>
+            </tr>
+        </thead>
+        <tbody>
+            <% dominio.forEach(function(details) { %>
+            <tr>
+                <td><%= details.desc %></td>
+                <td><a href="/dominio/edit/<%= details._id %>">Editar</a> - <a href="/dominio/delete/<%= details._id %>">Deletar</a>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <button><a href="/dominio/">Novo</a></button>
+</body>
+
+</html>
