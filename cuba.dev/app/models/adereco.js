@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 module.exports = () => {
-  const DominioSchema = mongoose.Schema(
+  const AderecoSchema = mongoose.Schema(
     {
       nome: { type: String, required: true, unique: true },
     },
@@ -10,5 +10,5 @@ module.exports = () => {
     }
   );
 
-  return mongoose.model("Dominio", DominioSchema);
+  return mongoose.model("Adereco", AderecoSchema);
 };
