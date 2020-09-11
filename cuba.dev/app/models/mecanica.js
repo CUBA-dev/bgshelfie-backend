@@ -1,16 +1,10 @@
-var mongoose = require("mongoose");
-module.exports = function () {
-    var schema = mongoose.Schema({
-      nome: {
-        type: String
-      },
-    });
-    return mongoose.model("Mecanica", schema);
-};
+const mongoose = require("mongoose");
 
-/*
-,
-        required: true,
-        index: {
-          unique: true,
-        },*/
+module.exports = () => {
+  const MecanicaSchema = mongoose.Schema({
+    nome: { type: String },
+    createdAt: { type: Date, default: Date.now },
+  });
+
+  return mongoose.model("Mecanica", MecanicaSchema);
+};
