@@ -6,7 +6,6 @@ module.exports = function (app) {
 
   controller.listarTodos = function (req, res) {
     Dominio.find()
-      
       .exec()
       .then(
         function (dominio) {

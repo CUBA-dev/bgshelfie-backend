@@ -18,11 +18,13 @@
   },
   "homepage": "https://github.com/CUBA-dev/bgshelfie-backend#readme",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "latest",
     "dotenv": "latest",
     "ejs": "latest",
     "express": "latest",
     "express-load": "latest",
+    "jsonwebtoken": "^8.5.1",
     "method-override": "latest",
     "mongodb": "latest",
     "mongoose": "latest",

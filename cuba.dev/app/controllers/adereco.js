@@ -6,7 +6,6 @@ module.exports = function (app) {
 
   controller.listarTodos = function (req, res) {
     Adereco.find()
-
       .exec()
       .then(
         function (adereco) {
