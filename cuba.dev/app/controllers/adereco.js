@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (adereco) {
             !adereco
-              ? res.status(404).json("Registro não encontrado")
+              ? res.status(404).json("Adereço não encontrado")
               : res.json(adereco);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Registro removido");
+            res.json("Adereço removido");
           },
           function (erro) {
             return console.error(erro);
