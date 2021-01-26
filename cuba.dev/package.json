@@ -26,8 +26,8 @@
     "express-load": "latest",
     "jsonwebtoken": "^8.5.1",
     "method-override": "latest",
-    "mongodb": "latest",
-    "mongoose": "latest",
-    "nodemon": "latest"
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7"
   }
 }
