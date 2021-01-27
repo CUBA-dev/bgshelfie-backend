@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (dominio) {
             (!dominio) ?
-              res.status(404).json("Domínio não encontrado") :
+              res.status(404).json("Registro não encontrado") :
               res.json(dominio);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Domínio removido");
+            res.json("Registro removido");
           },
           function (erro) {
             return console.error(erro);
