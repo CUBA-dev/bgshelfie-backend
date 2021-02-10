@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (sleeve) {
             !sleeve
-              ? res.status(404).json("Registro não encontrado")
+              ? res.status(404).json("Sleeve não encontrado")
               : res.json(sleeve);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Registro removido");
+            res.json("Sleeve removido");
           },
           function (erro) {
             return console.error(erro);

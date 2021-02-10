@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (dependenciaIdioma) {
             !dependenciaIdioma
-              ? res.status(404).json("Registro não encontrado")
+              ? res.status(404).json("Dependência de idioma não encontrado")
               : res.json(dependenciaIdioma);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Registro removido");
+            res.json("Dependência de idioma removido");
           },
           function (erro) {
             return console.error(erro);

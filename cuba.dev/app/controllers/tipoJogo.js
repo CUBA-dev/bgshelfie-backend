@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (tipoJogo) {
             (!tipoJogo) ?
-              res.status(404).json("Registro não encontrado") :
+              res.status(404).json("Tipo de jogo não encontrado") :
               res.json(tipoJogo);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Registro removido");
+            res.json("Tipo de jogo removido");
           },
           function (erro) {
             return console.error(erro);
