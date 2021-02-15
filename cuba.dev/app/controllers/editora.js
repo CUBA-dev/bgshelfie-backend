@@ -1,15 +1,15 @@
 var mongoose = require("mongoose");
 
 module.exports = function (app) {
-  var Adereco = app.models.adereco;
+  var Editora = app.models.editora;
   var controller = {};
 
   controller.listarTodos = function (req, res) {
-    Adereco.find()
+    Editora.find()
       .exec()
       .then(
-        function (adereco) {
-          res.json(adereco);
+        function (editora) {
+          res.json(editora);
         },
         function (erro) {
           console.error(erro);
@@ -23,13 +23,13 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.findById(_id)
+      Editora.findById(_id)
         .exec()
         .then(
-          function (adereco) {
-            !adereco
-              ? res.status(404).json("Adereço não encontrado")
-              : res.json(adereco);
+          function (editora) {
+            !editora
+              ? res.status(404).json("Editora não encontrada")
+              : res.json(editora);
           },
           function (erro) {
             console.log(erro);
@@ -46,11 +46,11 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.deleteOne({ _id: _id })
+      Editora.deleteOne({ _id: _id })
         .exec()
         .then(
           function () {
-            res.json("Adereço removido");
+            res.json("Editora removida");
           },
           function (erro) {
             return console.error(erro);
@@ -66,26 +66,25 @@ module.exports = function (app) {
     var _id = req.body._id;
     if (_id) {
       if (mongoose.Types.ObjectId.isValid(_id)) {
-        Adereco.findByIdAndUpdate(_id, req.body)
+        Editora.findByIdAndUpdate(_id, req.body)
           .exec()
           .then(
-            function (adereco) {
-              res.json(adereco);
+            function (editora) {
+              res.json(editora);
             },
             function (erro) {
               console.error(erro);
               res.status(500).json(erro);
             }
-          )
-          .catch((err) => console.log(err));
+          );
       } else {
         res.status(404).json("Valor de id não é válido");
       }
     } else {
-      Adereco.create(req.body)
+      Editora.create(req.body)
         .then(
-          function (adereco) {
-            res.status(201).json(adereco);
+          function (editora) {
+            res.status(201).json(editora);
           },
           function (erro) {
             console.log(erro);

@@ -1,15 +1,15 @@
 var mongoose = require("mongoose");
 
 module.exports = function (app) {
-  var Adereco = app.models.adereco;
+  var Jogo = app.models.jogo;
   var controller = {};
 
   controller.listarTodos = function (req, res) {
-    Adereco.find()
+    Jogo.find()
       .exec()
       .then(
-        function (adereco) {
-          res.json(adereco);
+        function (jogo) {
+          res.json(jogo);
         },
         function (erro) {
           console.error(erro);
@@ -23,13 +23,13 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.findById(_id)
+      Jogo.findById(_id)
         .exec()
         .then(
-          function (adereco) {
-            !adereco
-              ? res.status(404).json("Adereço não encontrado")
-              : res.json(adereco);
+          function (jogo) {
+            !jogo
+              ? res.status(404).json("Jogo não encontrado")
+              : res.json(jogo);
           },
           function (erro) {
             console.log(erro);
@@ -46,11 +46,11 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.deleteOne({ _id: _id })
+      Jogo.deleteOne({ _id: _id })
         .exec()
         .then(
           function () {
-            res.json("Adereço removido");
+            res.json("Jogo removido");
           },
           function (erro) {
             return console.error(erro);
@@ -66,11 +66,11 @@ module.exports = function (app) {
     var _id = req.body._id;
     if (_id) {
       if (mongoose.Types.ObjectId.isValid(_id)) {
-        Adereco.findByIdAndUpdate(_id, req.body)
+        Jogo.findByIdAndUpdate(_id, req.body)
           .exec()
           .then(
-            function (adereco) {
-              res.json(adereco);
+            function (jogo) {
+              res.json(jogo);
             },
             function (erro) {
               console.error(erro);
@@ -82,10 +82,10 @@ module.exports = function (app) {
         res.status(404).json("Valor de id não é válido");
       }
     } else {
-      Adereco.create(req.body)
+      Jogo.create(req.body)
         .then(
-          function (adereco) {
-            res.status(201).json(adereco);
+          function (jogo) {
+            res.status(201).json(jogo);
           },
           function (erro) {
             console.log(erro);

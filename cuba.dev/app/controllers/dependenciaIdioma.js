@@ -1,15 +1,15 @@
 var mongoose = require("mongoose");
 
 module.exports = function (app) {
-  var Adereco = app.models.adereco;
+  var DependenciaIdioma = app.models.dependenciaIdioma;
   var controller = {};
 
   controller.listarTodos = function (req, res) {
-    Adereco.find()
+    DependenciaIdioma.find()
       .exec()
       .then(
-        function (adereco) {
-          res.json(adereco);
+        function (dependenciaIdioma) {
+          res.json(dependenciaIdioma);
         },
         function (erro) {
           console.error(erro);
@@ -23,13 +23,13 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.findById(_id)
+      DependenciaIdioma.findById(_id)
         .exec()
         .then(
-          function (adereco) {
-            !adereco
-              ? res.status(404).json("Adereço não encontrado")
-              : res.json(adereco);
+          function (dependenciaIdioma) {
+            !dependenciaIdioma
+              ? res.status(404).json("Dependência de idioma não encontrado")
+              : res.json(dependenciaIdioma);
           },
           function (erro) {
             console.log(erro);
@@ -46,11 +46,11 @@ module.exports = function (app) {
     var _id = req.params.id;
 
     if (mongoose.Types.ObjectId.isValid(_id)) {
-      Adereco.deleteOne({ _id: _id })
+      DependenciaIdioma.deleteOne({ _id: _id })
         .exec()
         .then(
           function () {
-            res.json("Adereço removido");
+            res.json("Dependência de idioma removido");
           },
           function (erro) {
             return console.error(erro);
@@ -66,26 +66,25 @@ module.exports = function (app) {
     var _id = req.body._id;
     if (_id) {
       if (mongoose.Types.ObjectId.isValid(_id)) {
-        Adereco.findByIdAndUpdate(_id, req.body)
+        DependenciaIdioma.findByIdAndUpdate(_id, req.body)
           .exec()
           .then(
-            function (adereco) {
-              res.json(adereco);
+            function (dependenciaIdioma) {
+              res.json(dependenciaIdioma);
             },
             function (erro) {
               console.error(erro);
               res.status(500).json(erro);
             }
-          )
-          .catch((err) => console.log(err));
+          );
       } else {
         res.status(404).json("Valor de id não é válido");
       }
     } else {
-      Adereco.create(req.body)
+      DependenciaIdioma.create(req.body)
         .then(
-          function (adereco) {
-            res.status(201).json(adereco);
+          function (dependenciaIdioma) {
+            res.status(201).json(dependenciaIdioma);
           },
           function (erro) {
             console.log(erro);
