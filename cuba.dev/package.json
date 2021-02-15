@@ -41,12 +41,7 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
-  "config": {
-    "commitizen": {
-      "path": "cuba.dev\\node_modules\\cz-conventional-changelog"
-    }
-  },
   "cz-customizable": {
-   "config": "test.js"
- }
+    "config": "test.js"
+  }
 }
