@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (cidade) {
             !cidade
-              ? res.status(404).json("Cidade não encontrado")
+              ? res.status(404).json("Cidade não encontrada")
               : res.json(cidade);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Cidade removido");
+            res.json("Cidade removida");
           },
           function (erro) {
             return console.error(erro);
