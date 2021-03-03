@@ -28,7 +28,7 @@ module.exports = function (app) {
         .then(
           function (tematica) {
             (!tematica) ?
-              res.status(404).json("Temática não encontrado") :
+              res.status(404).json("Temática não encontrada") :
               res.json(tematica);
           },
           function (erro) {
@@ -50,7 +50,7 @@ module.exports = function (app) {
         .exec()
         .then(
           function () {
-            res.json("Tematica removido");
+            res.json("Tematica removida");
           },
           function (erro) {
             return console.error(erro);
