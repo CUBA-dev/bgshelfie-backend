@@ -28,7 +28,9 @@
     "method-override": "latest",
     "mongodb": "^3.6.3",
     "mongoose": "^5.11.13",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "p3x-xml2json": "^2021.4.112",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",

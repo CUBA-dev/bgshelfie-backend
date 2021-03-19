@@ -3,6 +3,8 @@ var mongoose = require("mongoose");
 module.exports = function (app) {
   var Jogo = app.models.jogo;
   var controller = {};
+  var parser = require('p3x-xml2json');
+var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
   controller.listarTodos = function (req, res) {
     Jogo.find()
@@ -94,6 +96,19 @@ module.exports = function (app) {
         )
         .catch((err) => console.log(err));
     }
+  };
+
+  controller.pesquisar = function(req, res){
+    pesquisa = req.body.pesquisa;
+    requestXml = new XMLHttpRequest();   
+    bggApiUrl = 'https://www.boardgamegeek.com/xmlapi2/';
+
+    requestXml.open("GET", bggApiUrl+"/search?query="+pesquisa+"&type=boardgame,rpg", false);
+    requestXml.send(null);
+    bgg = JSON.parse(parser.toJson(requestXml.responseText));
+    console.log(bgg)
+    return res.status(200).json(bgg);
+    
   };
 
   return controller;

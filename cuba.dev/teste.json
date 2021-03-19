@@ -1,0 +1,75 @@
+{
+    "items": {
+        "termsofuse": "https://boardgamegeek.com/xmlapi/termsofuse",
+        "item": {
+            "type": "boardgame",
+            "id": 269385,
+            "thumbnail": "https://cf.geekdo-images.com/1XA2-niwTBa0HEB7hOz3Dw__thumb/img/iMrsSq7nICZjz1DBXkefq-8E9Js=/fit-in/200x150/filters:strip_icc&amp;&amp;#35;40;&amp;&amp;#35;41;/pic4530974.jpg",
+            "image": "https://cf.geekdo-images.com/1XA2-niwTBa0HEB7hOz3Dw__original/img/MIJgG_K2IS1QT2mE0dyRFiWLSpg=/0x0/filters:format&amp;&amp;#35;40;jpeg&amp;&amp;#35;41;/pic4530974.jpg",
+            "name": [
+                {
+                    "type": "primary",
+                    "sortindex": 5,
+                    "value": "The Lord of the Rings: Journeys in Middle-Earth"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 3,
+                    "value": "A Gyűrűk Ura: Utazások Középföldén"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 5,
+                    "value": "Der Herr der Ringe: Reise durch Mittelerde"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 1,
+                    "value": "Pán prstenů: Putování po Středozemi"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 4,
+                    "value": "Le Seigneur des Anneaux: Voyages en Terre du Milieu"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 3,
+                    "value": "O Senhor dos Anéis: Jornadas na Terra Média"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 4,
+                    "value": "El Señor de los Anillos: Viajes por la Tierra Media"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 4,
+                    "value": "Il Signore degli Anelli: Viaggi nella Terra di Mezzo"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 1,
+                    "value": "Władca Pierścieni: Podróże przez Śródziemie"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 1,
+                    "value": "Властелин колец: Странствия в Средиземье"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 1,
+                    "value": "魔戒：中州征途"
+                },
+                {
+                    "type": "alternate",
+                    "sortindex": 1,
+                    "value": "반지의 제왕: 가운데땅 여정"
+                }
+            ],
+            "description":"Embark on your own adventures in J.R.R. Tolkien&apos;s iconic world with The Lord of the Rings: Journeys in Middle-Earth, a fully co-operative, app-supported board game for one to five players! You&apos;ll battle villainous foes, make courageous choices, and strike a blow against the evil that 
+threatens the land &amp;mdash; all as part of a thrilling campaign that leads you across the storied hills and dales of Middle-Earth.&amp;&amp;#35;10;&amp;&amp;#35;10;Each individual game of Journeys in Middle-Earth is a single adventure in a larger campaign. You&apos;ll explore the vast and dynamic landscapes of Middle-earth, using your skills to survive the challenges that you encounter on these perilous quests. As you and your fellow heroes explore the wilderness and battle the dark forces arrayed against you, the game&apos;s companion app guides you to reveal the looming forests, quiet clearings, and ancient halls of Middle-Earth, while also controlling the enemies you encounter. Whether you&apos;re venturing into 
+the wild on your own or with close companions by your side, you can write your own legend in the history of Middle-Earth.&amp;&amp;#35;10;&amp;&amp;#35;10;&amp;mdash;description from the publisher&amp;&amp;#35;10;&amp;&amp;#35;10;","yearpublished":{"value":2019},"minplayers":{"value":1},"maxplayers":{"value":5},"poll":[{"name":"suggested_numplayers","title":"User Suggested Number of Players","totalvotes":265,"results":[{"numplayers":1,"result":[{"value":"Best","numvotes":100},{"value":"Recommended","numvotes":92},{"value":"Not Recommended","numvotes":14}]},{"numplayers":2,"result":[{"value":"Best","numvotes":128},{"value":"Recommended","numvotes":88},{"value":"Not Recommended","numvotes":8}]},{"numplayers":3,"result":[{"value":"Best","numvotes":52},{"value":"Recommended","numvotes":126},{"value":"Not Recommended","numvotes":21}]},{"numplayers":4,"result":[{"value":"Best","numvotes":42},{"value":"Recommended","numvotes":103},{"value":"Not Recommended","numvotes":47}]},{"numplayers":5,"result":[{"value":"Best","numvotes":5},{"value":"Recommended","numvotes":41},{"value":"Not Recommended","numvotes":123}]},{"numplayers":"5+","result":[{"value":"Best","numvotes":0},{"value":"Recommended","numvotes":0},{"value":"Not Recommended","numvotes":149}]}]},{"name":"suggested_playerage","title":"User Suggested Player Age","totalvotes":60,"results":{"result":[{"value":2,"numvotes":0},{"value":3,"numvotes":0},{"value":4,"numvotes":0},{"value":5,"numvotes":0},{"value":6,"numvotes":0},{"value":8,"numvotes":11},{"value":10,"numvotes":26},{"value":12,"numvotes":18},{"value":14,"numvotes":5},{"value":16,"numvotes":0},{"value":18,"numvotes":0},{"value":"21 and up","numvotes":0}]}},{"name":"language_dependence","title":"Language Dependence","totalvotes":10,"results":{"result":[{"level":161,"value":"No necessary 
+in-game text","numvotes":0},{"level":162,"value":"Some necessary text - easily memorized or small crib sheet","numvotes":0},{"level":163,"value":"Moderate in-game text - needs crib sheet or paste ups","numvotes":0},{"level":164,"value":"Extensive use of text - massive conversion needed to be playable","numvotes":7},{"level":165,"value":"Unplayable in another language","numvotes":3}]}}],"playingtime":{"value":120},"minplaytime":{"value":60},"maxplaytime":{"value":120},"minage":{"value":14},"link":[{"type":"boardgamecategory","id":1022,"value":"Adventure"},{"type":"boardgamecategory","id":1010,"value":"Fantasy"},{"type":"boardgamecategory","id":1046,"value":"Fighting"},{"type":"boardgamecategory","id":1047,"value":"Miniatures"},{"type":"boardgamecategory","id":1093,"value":"Novel-based"},{"type":"boardgamemechanic","id":2023,"value":"Cooperative Game"},{"type":"boardgamemechanic","id":2664,"value":"Deck, Bag, and Pool Building"},{"type":"boardgamemechanic","id":2011,"value":"Modular Board"},{"type":"boardgamemechanic","id":2028,"value":"Role Playing"},{"type":"boardgamemechanic","id":2822,"value":"Scenario / Mission / Campaign Game"},{"type":"boardgamemechanic","id":2819,"value":"Solo / Solitaire Game"},{"type":"boardgamemechanic","id":2015,"value":"Variable Player Powers"},{"type":"boardgamefamily","id":4263,"value":"Authors: J.R.R. Tolkien"},{"type":"boardgamefamily","id":59218,"value":"Category: Dungeon Crawler"},{"type":"boardgamefamily","id":41489,"value":"Components: Digital Hybrid - App Required"},{"type":"boardgamefamily","id":25158,"value":"Components: Miniatures"},{"type":"boardgamefamily","id":24281,"value":"Mechanism: Campaign Games"},{"type":"boardgamefamily","id":5666,"value":"Players: Games with Solitaire Rules"},{"type":"boardgameexpansion","id":295353,"value":"The Lord of the Rings: Journeys in Middle Earth – Hunt for the Ember Crown"},{"type":"boardgameexpansion","id":316630,"value":"The Lord of the Rings: Journeys in Middle-earth – Dwellers in Darkness Figure Pack"},{"type":"boardgameexpansion","id":299597,"value":"The Lord of the Rings: Journeys in Middle-earth – Shadowed Paths Expansion"},{"type":"boardgameexpansion","id":319895,"value":"The Lord of the Rings: Journeys in Middle-earth – The Haunting of Dale"},{"type":"boardgameexpansion","id":277721,"value":"The Lord of the Rings: Journeys in Middle-earth 
+– Villains of Eriador Figure Pack"},{"type":"boardgamedesigner","id":76251,"value":"Nathan I. Hajek"},{"type":"boardgamedesigner","id":102932,"value":"Grace Holdinghaus"},{"type":"boardgamepublisher","id":17,"value":"Fantasy Flight Games"},{"type":"boardgamepublisher","id":23043,"value":"ADC Blackfire Entertainment"},{"type":"boardgamepublisher","id":157,"value":"Asmodee"},{"type":"boardgamepublisher","id":6194,"value":"Delta Vision Publishing"},{"type":"boardgamepublisher","id":15605,"value":"Galápagos Jogos"},{"type":"boardgamepublisher","id":18852,"value":"Hobby World"},{"type":"boardgamepublisher","id":8291,"value":"Korea Boardgames Co., Ltd."},{"type":"boardgamepublisher","id":7466,"value":"Rebel Sp. z o.o."}]}}}
